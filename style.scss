@@ -1,6 +1,7 @@
 @import './partials/colors';
 @import './partials/mixins';
 @import './partials/typography';
+@import './partials/variables';
 
 /*
 SPACING SYSTEM (px)
@@ -11,6 +12,10 @@ FONT SIZE SYSTEM (px)
 */
 
 // BASIC COMPONENT
+html {
+	font-size: 62.5%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,4 +24,6 @@ FONT SIZE SYSTEM (px)
 
 body {
 	font-family: $ff-public;
+	background: $transparent-white;
+	line-height: 1;
 }
