@@ -24,6 +24,148 @@ html {
 
 body {
 	font-family: $ff-public;
-	background: $transparent-white;
+	background: $very-light-gray;
+	color: $transparent-white;
 	line-height: 1;
+
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+img {
+	height: 2.3rem;
+	margin-top: 1.6rem;
+}
+
+.card-component {
+	display: grid;
+	grid-template-columns: 1fr;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 4%);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.card {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 1.6rem;
+	padding: 0 4.8rem;
+	width: 25rem;
+}
+
+.card-1 {
+	background-color: $bright-orange;
+}
+
+.card-2 {
+	background-color: $dark-cyan;
+}
+
+.card-3 {
+	background-color: $very-dark-cyan;
+}
+
+.heading {
+	font-size: 2rem;
+	font-family: $ff-private;
+	text-transform: uppercase;
+}
+
+.text {
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+.btn:link,
+.btn:visited {
+	text-decoration: none;
+	padding: 1rem 1.5rem;
+	border-radius: 2.4rem;
+	background-color: $very-light-gray;
+	text-align: center;
+	width: 9rem;
+	margin-bottom: 1.6rem;
+	border: 2px solid $transparent-white;
+	display: inline-block;
+}
+.btn:hover,
+.btn:active {
+	color: $very-light-gray;
+}
+
+.btn-1:link,
+.btn-1:visited {
+	color: $bright-orange;
+}
+
+.btn-1:hover,
+.btn-1:active {
+	background: $bright-orange;
+	color: $very-light-gray;
+}
+
+.btn-2:link,
+.btn-2:visited {
+	color: $dark-cyan;
+}
+
+.btn-2:hover,
+.btn-2:active {
+	background: $dark-cyan;
+	color: $very-light-gray;
+}
+
+.btn-3:link,
+.btn-3:visited {
+	color: $very-dark-cyan;
+}
+
+.btn-3:hover,
+.btn-3:active {
+	background: $very-dark-cyan;
+	color: $very-light-gray;
+}
+
+// Media Query
+
+@include laptop-query {
+	.card-component {
+		grid-template-columns: repeat(3, 1fr);
+		transform: translate(-50%, 30%);
+	}
+
+	img {
+		height: auto;
+		margin-top: 4.8rem;
+	}
+
+	.card {
+		row-gap: 3.2rem;
+		padding: 0 6.4rem;
+		width: 36rem;
+	}
+
+	.heading {
+		font-size: 4.4rem;
+		letter-spacing: -0.5px;
+	}
+
+	.text {
+		font-size: 1.5rem;
+		line-height: 1.6;
+		margin-bottom: 4.8rem;
+	}
+
+	.btn:link,
+	.btn:visited {
+		width: 70%;
+		font-size: 1.6rem;
+		padding: 1.6rem 3.2rem;
+		border-radius: 3.2rem;
+		margin-bottom: 4.8rem;
+	}
 }
